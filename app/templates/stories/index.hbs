@@ -3,7 +3,6 @@
     <tr>
       <th>Title</th>
       <th>Due Date</th>
-      <th>Task</th>
       <th></th>
     </tr>
   </thead>
@@ -12,13 +11,6 @@
     <tr>
       <td>{{#link-to 'stories.story' story.id}}{{story.title}}{{/link-to}}</td>
       <td>{{story.dueDate}}</td>
-      <td>
-        <ul>
-          {{#each story.tasks as |task|}}
-            <li>{{task.name}}</li>
-          {{/each}}
-        </ul>
-      </td>
       <td style="text-align: center" {{action 'deleteStory' story}}><button class="btn btn-danger btn-sm">Delete</button></td>
     </tr>
   {{else}}
