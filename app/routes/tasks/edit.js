@@ -7,7 +7,13 @@ export default Ember.Route.extend({
 
   actions: {
     saveTask(task) {
-      task.save().then(() => this.transitionTo('tasks'));
+      let storyId = this.controller.get('storyId');
+      let story = this.get('store').peekRecord('story', storyId);
+      task.set('story', story);
+      story.get('tasks').pushObject(task);
+      task.save().then(function() {
+        story.save();
+      }).then(() => this.transitionTo('tasks'));
     },
 
     willTransition(transition) {
