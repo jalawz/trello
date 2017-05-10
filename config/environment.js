@@ -20,6 +20,19 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+
+    firebase: {
+      apiKey: 'AIzaSyAhLjFDhO-jfIkBGX2jWzbkwdce41dE7rU',
+      authDomain: 'trello-app-b5e5a.firebaseapp.com',
+      databaseURL: 'https://trello-app-b5e5a.firebaseio.com',
+      storageBucket: 'trello-app-b5e5a.appspot.com',
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
     }
   };
 
