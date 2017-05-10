@@ -13,12 +13,6 @@ Router.map(function() {
     this.route('edit', {path: '/edit/:id'});
     this.route('add-task', {path: '/:story_id/add-task'})
   });
-
-  this.route('tasks', function() {
-    this.route('new');
-    this.route('task', {path: '/:id'});
-    this.route('edit', {path: '/edit/:id'});
-  });
 });
 
 export default Router;
