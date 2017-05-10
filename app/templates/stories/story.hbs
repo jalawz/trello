@@ -15,8 +15,7 @@
               {{task.name}}
             </div>
             <div class="panel-footer">
-              {{#link-to 'stories.edit-task' task.id class="btn btn-success btn-sm"}}Edit Task{{/link-to}}
-              <button class="btn btn-danger btn-sm" {{action 'deleteTask' model}}>Delete task</button>
+              {{#link-to 'stories.view-task' task.id class="btn btn-success btn-sm"}}View Task{{/link-to}}
             </div>
           </div>
         </div>
