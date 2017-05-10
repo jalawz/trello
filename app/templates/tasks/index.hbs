@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>Story</th>
       <th></th>
     </tr>
   </thead>
@@ -9,6 +10,7 @@
   {{#each model as |task|}}
     <tr>
       <td>{{#link-to 'tasks.task' task.id}}{{task.name}}{{/link-to}}</td>
+      <td>{{task.story.title}}</td>
       <td style="text-align: center"><button class="btn btn-danger" {{action 'deleteTask' task}}>Delete</button></td>
     </tr>
   {{else}}
