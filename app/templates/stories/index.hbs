@@ -1,0 +1,20 @@
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Due Date</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |story|}}
+    <tr>
+      <td>{{story.title}}</td>
+      <td>{{story.dueDate}}</td>
+    </tr>
+  {{else}}
+    <tr>
+      <td colspan="2">Coleção Vazia</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
