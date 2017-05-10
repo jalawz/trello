@@ -1,1 +1,27 @@
-{{outlet}}
+<h1>Add new Story</h1>
+
+<div class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Story Title</label>
+    <div class="col-sm-10">
+      {{input type="text" value=model.title class="form-control" placeholder="The title of the Story"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Story Due Date</label>
+    <div class="col-sm-10">
+      {{input type="date" value=model.dueDate class="form-control" placeholder="The due date of the Story"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="col-sm-2 control-label">Story Due Date</label>
+    <div class="col-sm-10">
+      {{input type="text" value=model.tasks class="form-control" placeholder="The task of the Story"}}
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" {{action 'saveStory' model}}>Save Story</button>
+    </div>
+  </div>
+</div>
