@@ -2,7 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.createRecord('story');
+    return Ember.RSVP.hash({
+      story: this.store.createRecord('story'),
+      tasks: this.store.findAll('task')
+    });
   },
 
   actions: {
