@@ -11,11 +11,13 @@ Router.map(function() {
     this.route('story', {path: '/:id'});
     this.route('new');
     this.route('edit', {path: '/edit/:id'});
-    this.route('tasks', {path: '/:storyId/tasks'}, function() {
-      this.route('new');
-      this.route('task', {path: '/:id'});
-      this.route('edit', {path: '/edit/:id'});
-    });
+    this.route('add-task', {path: '/:story_id/add-task'})
+  });
+
+  this.route('tasks', function() {
+    this.route('new');
+    this.route('task', {path: '/:id'});
+    this.route('edit', {path: '/edit/:id'});
   });
 });
 
