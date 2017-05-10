@@ -7,7 +7,7 @@
   <tbody>
   {{#each model as |task|}}
     <tr>
-      <td>{{task.name}}</td>
+      <td>{{#link-to 'tasks.task' task.id}}{{task.name}}{{/link-to}}</td>
     </tr>
   {{else}}
     <tr>
