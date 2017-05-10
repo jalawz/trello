@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    story: this.store.createRecord('story');
+    return this.store.createRecord('story');
   },
 
   actions: {
