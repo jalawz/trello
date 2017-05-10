@@ -12,6 +12,7 @@ Router.map(function() {
     this.route('new');
     this.route('edit', {path: '/edit/:id'});
     this.route('add-task', {path: '/:story_id/add-task'})
+    this.route('view-task', {path: '/:task_id/view-task'});
   });
 });
 
