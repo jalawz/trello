@@ -5,11 +5,13 @@ export default Ember.Route.extend({
     return this.store.findRecord('story', params.id, {include: 'tasks'});
   },
 
-  deleteTask(task) {
-    let confirmation = confirm('Are you sure?');
+  actions: {
+    deleteTask(task) {
+      let confirmation = confirm('Are you sure?');
 
-    if (confirmation) {
-      task.destroyRecord().then(() => this.transitionTo('stories'));
+      if (confirmation) {
+        task.destroyRecord().then(() => this.transitionTo('stories'));
+      }
     }
   }
 });
