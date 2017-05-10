@@ -7,7 +7,11 @@ export default Ember.Route.extend({
 
   actions: {
     deleteTask(task) {
-      
+      let confirmation = confirm('Are you sure?');
+
+      if (confirmation) {
+        task.destroyRecord().then(() => this.transitionTo('stories'));
+      }
     }
   }
 });
