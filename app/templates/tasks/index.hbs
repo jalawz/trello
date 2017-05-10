@@ -1,1 +1,24 @@
-{{outlet}}
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Due Date</th>
+      <th>Task</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each model as |task|}}
+    <tr>
+      <td>{{task.name}}</td>
+      <td>{{story.dueDate}}</td>
+      <td>{{story.tasks}}</td>
+      <td style="text-align: center" {{action 'deleteStory' story}}><button class="btn btn-danger btn-sm">Delete</button></td>
+    </tr>
+  {{else}}
+    <tr>
+      <td colspan="2">Coleção Vazia</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
