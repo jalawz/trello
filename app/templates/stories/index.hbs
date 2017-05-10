@@ -9,7 +9,7 @@
   <tbody>
   {{#each model as |story|}}
     <tr>
-      <td>{{story.title}}</td>
+      <td>{{#link-to 'stories.story' story.id}}{{story.title}}{{/link-to}}</td>
       <td>{{story.dueDate}}</td>
       <td>{{story.tasks}}</td>
     </tr>
